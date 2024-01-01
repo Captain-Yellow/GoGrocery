@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "revision" : "3dc6a42c7727c49bf26508e29b0a0b35f9c7e1ad",
+        "version" : "5.8.1"
+      }
+    },
+    {
+      "identity" : "ggpackage-shareddto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Captain-Yellow/GGPackage-SharedDTO.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "89c0ce5d1997cc1ea8b90bed01787322db29e810"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -7,16 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2C88792B2DD9E4006EECF1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C88782B2DD9E4006EECF1 /* Extensions.swift */; };
+		FD2C887D2B2DF5ED006EECF1 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C887C2B2DF5ED006EECF1 /* HTTPClient.swift */; };
+		FD47B8CB2B36E10800785417 /* AddGroceryCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47B8CA2B36E10800785417 /* AddGroceryCategoryView.swift */; };
+		FD47B8CE2B36E36700785417 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47B8CD2B36E36700785417 /* ColorSelector.swift */; };
+		FD481BC12B41538800F1E51D /* GroceryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD481BC02B41538800F1E51D /* GroceryDetailView.swift */; };
+		FD481BC32B41563000F1E51D /* AddNewGroceryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD481BC22B41563000F1E51D /* AddNewGroceryItemView.swift */; };
+		FDA1CBD42B2F40D40023AC04 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA1CBD32B2F40D40023AC04 /* Constants.swift */; };
+		FDA1CBD72B2F40E70023AC04 /* GroceryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA1CBD62B2F40E70023AC04 /* GroceryModel.swift */; };
+		FDA1CBDC2B2F5E460023AC04 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA1CBDB2B2F5E460023AC04 /* LoginView.swift */; };
+		FDA1CBE02B2F94AF0023AC04 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA1CBDF2B2F94AF0023AC04 /* AppState.swift */; };
+		FDB12E422B374AC600393A0C /* GroceryCategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB12E412B374AC600393A0C /* GroceryCategoryListView.swift */; };
+		FDCAA82A2B31C7B5001C6934 /* GoGrocerySharedDTO in Frameworks */ = {isa = PBXBuildFile; productRef = FDCAA8292B31C7B5001C6934 /* GoGrocerySharedDTO */; };
 		FDFE9F7A2B19E393002348DA /* GoGroceryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFE9F792B19E393002348DA /* GoGroceryApp.swift */; };
-		FDFE9F7C2B19E393002348DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFE9F7B2B19E393002348DA /* ContentView.swift */; };
+		FDFE9F7C2B19E393002348DA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFE9F7B2B19E393002348DA /* RegisterView.swift */; };
 		FDFE9F7E2B19E394002348DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFE9F7D2B19E394002348DA /* Assets.xcassets */; };
 		FDFE9F812B19E394002348DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFE9F802B19E394002348DA /* Preview Assets.xcassets */; };
+		FDFE9F892B19E4B4002348DA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FDFE9F882B19E4B4002348DA /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD2C88782B2DD9E4006EECF1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FD2C887C2B2DF5ED006EECF1 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FD47B8CA2B36E10800785417 /* AddGroceryCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroceryCategoryView.swift; sourceTree = "<group>"; };
+		FD47B8CD2B36E36700785417 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
+		FD481BC02B41538800F1E51D /* GroceryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryDetailView.swift; sourceTree = "<group>"; };
+		FD481BC22B41563000F1E51D /* AddNewGroceryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroceryItemView.swift; sourceTree = "<group>"; };
+		FDA1CBD32B2F40D40023AC04 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FDA1CBD62B2F40E70023AC04 /* GroceryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryModel.swift; sourceTree = "<group>"; };
+		FDA1CBDB2B2F5E460023AC04 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FDA1CBDF2B2F94AF0023AC04 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		FDB12E412B374AC600393A0C /* GroceryCategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryCategoryListView.swift; sourceTree = "<group>"; };
 		FDFE9F762B19E393002348DA /* GoGrocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGrocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFE9F792B19E393002348DA /* GoGroceryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoGroceryApp.swift; sourceTree = "<group>"; };
-		FDFE9F7B2B19E393002348DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FDFE9F7B2B19E393002348DA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		FDFE9F7D2B19E394002348DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDFE9F802B19E394002348DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -26,12 +50,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFE9F892B19E4B4002348DA /* Alamofire in Frameworks */,
+				FDCAA82A2B31C7B5001C6934 /* GoGrocerySharedDTO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD2C88772B2DD9C5006EECF1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FDA1CBD32B2F40D40023AC04 /* Constants.swift */,
+				FDA1CBDF2B2F94AF0023AC04 /* AppState.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FD2C887A2B2DF5B7006EECF1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD2C88782B2DD9E4006EECF1 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FD2C887B2B2DF5CB006EECF1 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				FD2C887C2B2DF5ED006EECF1 /* HTTPClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		FD47B8CC2B36E25E00785417 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				FD47B8CD2B36E36700785417 /* ColorSelector.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		FDA1CBD52B2F40D80023AC04 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDA1CBD62B2F40E70023AC04 /* GroceryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDA1CBDA2B2F4EE20023AC04 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD47B8CC2B36E25E00785417 /* SubViews */,
+				FDFE9F7B2B19E393002348DA /* RegisterView.swift */,
+				FDA1CBDB2B2F5E460023AC04 /* LoginView.swift */,
+				FD47B8CA2B36E10800785417 /* AddGroceryCategoryView.swift */,
+				FDB12E412B374AC600393A0C /* GroceryCategoryListView.swift */,
+				FD481BC02B41538800F1E51D /* GroceryDetailView.swift */,
+				FD481BC22B41563000F1E51D /* AddNewGroceryItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FDFE9F6D2B19E393002348DA = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +133,11 @@
 			isa = PBXGroup;
 			children = (
 				FDFE9F792B19E393002348DA /* GoGroceryApp.swift */,
-				FDFE9F7B2B19E393002348DA /* ContentView.swift */,
+				FDA1CBD52B2F40D80023AC04 /* Models */,
+				FDA1CBDA2B2F4EE20023AC04 /* Views */,
+				FD2C887B2B2DF5CB006EECF1 /* Client */,
+				FD2C887A2B2DF5B7006EECF1 /* Extensions */,
+				FD2C88772B2DD9C5006EECF1 /* Utils */,
 				FDFE9F7D2B19E394002348DA /* Assets.xcassets */,
 				FDFE9F7F2B19E394002348DA /* Preview Content */,
 			);
@@ -83,6 +168,10 @@
 			dependencies = (
 			);
 			name = GoGrocery;
+			packageProductDependencies = (
+				FDFE9F882B19E4B4002348DA /* Alamofire */,
+				FDCAA8292B31C7B5001C6934 /* GoGrocerySharedDTO */,
+			);
 			productName = GoGrocery;
 			productReference = FDFE9F762B19E393002348DA /* GoGrocery.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +200,10 @@
 				Base,
 			);
 			mainGroup = FDFE9F6D2B19E393002348DA;
+			packageReferences = (
+				FDFE9F872B19E4B4002348DA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FDCAA8282B31C7B5001C6934 /* XCRemoteSwiftPackageReference "GGPackage-SharedDTO" */,
+			);
 			productRefGroup = FDFE9F772B19E393002348DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +230,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDFE9F7C2B19E393002348DA /* ContentView.swift in Sources */,
+				FDA1CBD42B2F40D40023AC04 /* Constants.swift in Sources */,
+				FD481BC32B41563000F1E51D /* AddNewGroceryItemView.swift in Sources */,
+				FDA1CBE02B2F94AF0023AC04 /* AppState.swift in Sources */,
+				FDA1CBD72B2F40E70023AC04 /* GroceryModel.swift in Sources */,
+				FDFE9F7C2B19E393002348DA /* RegisterView.swift in Sources */,
 				FDFE9F7A2B19E393002348DA /* GoGroceryApp.swift in Sources */,
+				FD47B8CB2B36E10800785417 /* AddGroceryCategoryView.swift in Sources */,
+				FD2C887D2B2DF5ED006EECF1 /* HTTPClient.swift in Sources */,
+				FD2C88792B2DD9E4006EECF1 /* Extensions.swift in Sources */,
+				FDB12E422B374AC600393A0C /* GroceryCategoryListView.swift in Sources */,
+				FD47B8CE2B36E36700785417 /* ColorSelector.swift in Sources */,
+				FDA1CBDC2B2F5E460023AC04 /* LoginView.swift in Sources */,
+				FD481BC12B41538800F1E51D /* GroceryDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +384,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +414,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +450,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FDCAA8282B31C7B5001C6934 /* XCRemoteSwiftPackageReference "GGPackage-SharedDTO" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Captain-Yellow/GGPackage-SharedDTO.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		FDFE9F872B19E4B4002348DA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FDCAA8292B31C7B5001C6934 /* GoGrocerySharedDTO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDCAA8282B31C7B5001C6934 /* XCRemoteSwiftPackageReference "GGPackage-SharedDTO" */;
+			productName = GoGrocerySharedDTO;
+		};
+		FDFE9F882B19E4B4002348DA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDFE9F872B19E4B4002348DA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDFE9F6E2B19E393002348DA /* Project object */;
 }
