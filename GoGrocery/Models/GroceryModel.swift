@@ -78,7 +78,12 @@ import GoGrocerySharedDTO
         groceryItems.append(addedItem)
     }
     
-    func pupolateGroceryItems() async throws -> String {
+    func pupolateGroceryItems(groceryId: UUID) async throws -> String {
+        
+        return "OK"
+    }
+    
+    func deleteGroceryItems(groceryId: UUID, itemId: UUID) async throws -> String {
         
         return "OK"
     }

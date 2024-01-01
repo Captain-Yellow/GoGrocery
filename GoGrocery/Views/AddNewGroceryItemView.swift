@@ -39,6 +39,7 @@ struct AddNewGroceryItemView: View {
                         print("form isnt valid")
                     }
                 }
+                .disabled(!isFormValid)
             }
             
             ToolbarItem(placement: .topBarLeading) {

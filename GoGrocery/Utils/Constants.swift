@@ -29,5 +29,13 @@ struct Constants {
         static func saveGroceryItem(userId: UUID, categoryId: UUID) -> URL {
             URL(string: "\(baseUrl)/users/\(userId)/grocery_categories/\(categoryId)/grocery_items")!
         }
+        
+        static func getGroceryItems(userId: UUID, categoryId: UUID) -> URL {
+            URL(string: "\(baseUrl)/users/\(userId)/grocery_categories/\(categoryId)/grocery_items")!
+        }
+        
+        static func deleteGroceryItem(userId: UUID, categoryId: UUID, itemId: UUID) -> URL {
+            URL(string: "\(baseUrl)/users/\(userId)/grocery_categories/\(categoryId)/grocery_items/\(itemId)")!
+        }
     }
 }
