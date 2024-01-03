@@ -37,6 +37,11 @@ struct LoginView: View {
 //                .fullScreenCover(isPresented: $loggedIn) {
 //                    GroceryCategoryListView()
 //                }
+                Spacer()
+                
+                Button("Register") {
+                    appState.routes.append(.RegisterScreen)
+                }
             }
             .frame(maxWidth: .infinity)
             
@@ -54,6 +59,15 @@ struct LoginView: View {
                 .frame(maxWidth: .infinity)
             }
         }
+        .navigationTitle("Login")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .sheet(item: $appState.globalErrorWrapper) { errorValue in
+            ErrorView(errorWrapper: errorValue)
+                .presentationDetents([.medium])
+//                .presentationDetents([.fraction(0.25)])
+//                .presentationDetents([.height(200)])
+        }
     }
 
     private func login() async {
@@ -62,6 +76,7 @@ struct LoginView: View {
             if resault.error {
                 self.error = true
                 self.errorMessage = resault.reason ?? ""
+                appState.globalErrorWrapper = ErrorWrapper(error: GlobalErrorsType.loginError, guidance: resault.reason ?? "")
             } else {
 //                appState.popAll()
                 loggedIn.toggle()

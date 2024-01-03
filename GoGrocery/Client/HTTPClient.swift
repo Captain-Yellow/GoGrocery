@@ -61,6 +61,17 @@ struct Resourse<T: Codable> {
 //}
 
 struct HTTPClient {
+    private var requredHeaders: [String : String] {
+        var header = ["Content-Type" : "application/json"]
+        
+        guard let userToken = UserDefaults.standard.string(forKey: "authToken") else {
+            return header
+        }
+        
+        header["Authorization"] = "Bearer \(userToken)"
+        return header
+    }
+    
     func load<T: Codable>(_ resourse: Resourse<T>) async throws -> T {
         var request = URLRequest(url: resourse.url)
         
@@ -81,7 +92,7 @@ struct HTTPClient {
                 request.httpMethod = resourse.method.name
         }
         let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = ["Content-Type" : "application/json"]
+        configuration.httpAdditionalHeaders = requredHeaders
         let session = URLSession(configuration: configuration)
 //        async let (data, _) = session.data(for: URLRequest(url: resourse.url))
         let (data, _) = try await session.data(for: request)

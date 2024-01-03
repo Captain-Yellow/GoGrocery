@@ -16,31 +16,52 @@ struct GroceryDetailView: View {
     
     var body: some View {
         VStack {
-            List(0...10, id: \.self) { index in
-                Text("list Item \(index)")
-            }
-            .navigationTitle(groceryCategoryResponseDTO.title)
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Close") {
-                        dismiss()
-                    }
-                }
-                
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("Add") {
-                        addItemViewIsPresented = true
+            if groceryModel.groceryItems.isEmpty {
+                ContentUnavailableView("No items found", image: "Person")
+            } else {
+                GroceryItemListView(groceryItems: groceryModel.groceryItems) { categoryItemId in
+                    Task {
+                        do {
+                            try await groceryModel.deleteGroceryItems(groceryId: groceryCategoryResponseDTO.id, itemId: categoryItemId)
+                        } catch {
+                            print(error.localizedDescription)
+                        }
                     }
                 }
             }
-            .sheet(isPresented: $addItemViewIsPresented) {
-                NavigationStack {
-                    
+        }
+        .navigationTitle(groceryCategoryResponseDTO.title)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button("Close") {
+                    dismiss()
                 }
             }
-            .onAppear {
-                groceryModel.groceryCategoryResponseDTO = groceryCategoryResponseDTO
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("Add") {
+                    addItemViewIsPresented = true
+                }
             }
+        }
+        .sheet(isPresented: $addItemViewIsPresented) {
+            NavigationStack {
+                AddNewGroceryItemView()
+            }
+        }
+        .onAppear {
+            groceryModel.groceryCategoryResponseDTO = groceryCategoryResponseDTO
+        }
+        .task {
+            await populateGroceryItems()
+        }
+    }
+    
+    private func populateGroceryItems() async {
+        do {
+            try await groceryModel.pupolateGroceryItems(categoryId: groceryCategoryResponseDTO.id)
+        } catch {
+            print(error.localizedDescription)
         }
     }
 }

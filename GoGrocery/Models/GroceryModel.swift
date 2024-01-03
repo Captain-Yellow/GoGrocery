@@ -13,7 +13,7 @@ import GoGrocerySharedDTO
     var groceryCategories: [GroceryCategoryResponseDTO] = []
     let client = HTTPClient()
     var groceryItems: [GroceryItemResponseDTO] = []
-    var groceryCategoryResponseDTO: GroceryCategoryResponseDTO?
+    /*nonisolated*/ var groceryCategoryResponseDTO: GroceryCategoryResponseDTO?
     
     func registerUser(username: String, password: String) async throws -> RegisterResponceDTO {
         let data = ["username" : username, "password" : password]
@@ -78,13 +78,33 @@ import GoGrocerySharedDTO
         groceryItems.append(addedItem)
     }
     
-    func pupolateGroceryItems(groceryId: UUID) async throws -> String {
+    func pupolateGroceryItems(categoryId: UUID) async throws {
+        guard let userId = UserDefaults.standard.userId else {
+            return
+        }
         
-        return "OK"
+        let resorce = Resourse(url: Constants.urls.getGroceryItems(userId: userId, categoryId: categoryId), methodType: [GroceryItemResponseDTO].self)
+        
+        groceryItems = try await client.load(resorce)
     }
     
-    func deleteGroceryItems(groceryId: UUID, itemId: UUID) async throws -> String {
+    func deleteGroceryItems(groceryId: UUID, itemId: UUID) async throws {
+        guard let userId = UserDefaults.standard.userId else {
+            return
+        }
         
-        return "OK"
+        let resource = Resourse(url: Constants.urls.deleteGroceryItem(userId: userId, categoryId: groceryId, itemId: itemId), method: .delete, methodType: GroceryItemResponseDTO.self)
+        
+        let removedItem = try await client.load(resource)
+        
+        groceryItems = groceryItems.filter {
+            $0.id != removedItem.id
+        }
+    }
+    
+    func logOut() {
+        let userDefault = UserDefaults.standard
+        userDefault.removeObject(forKey: "userId")
+        userDefault.removeObject(forKey: "authToken")
     }
 }

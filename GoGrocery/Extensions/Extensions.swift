@@ -46,11 +46,15 @@ extension UserDefaults {
 
 extension GroceryCategoryResponseDTO: Identifiable, Hashable {
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(<#T##value: Hashable##Hashable#>)
+        hasher.combine(id)
     }
     
     public static func ==(lhs: GroceryCategoryResponseDTO, rhs: GroceryCategoryResponseDTO) -> Bool {
-        <#code#>
+        return lhs.id == rhs.id
     }
  
+}
+
+extension GroceryItemResponseDTO: Identifiable, @unchecked Sendable {
+    
 }

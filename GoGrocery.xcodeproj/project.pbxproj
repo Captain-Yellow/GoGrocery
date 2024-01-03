@@ -13,6 +13,9 @@
 		FD47B8CE2B36E36700785417 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47B8CD2B36E36700785417 /* ColorSelector.swift */; };
 		FD481BC12B41538800F1E51D /* GroceryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD481BC02B41538800F1E51D /* GroceryDetailView.swift */; };
 		FD481BC32B41563000F1E51D /* AddNewGroceryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD481BC22B41563000F1E51D /* AddNewGroceryItemView.swift */; };
+		FD73803F2B457D4E00C3BD95 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73803E2B457D4E00C3BD95 /* ErrorView.swift */; };
+		FD7380412B457D6D00C3BD95 /* GlobalErrorsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7380402B457D6D00C3BD95 /* GlobalErrorsType.swift */; };
+		FD972C952B434ADE00734B87 /* GroceryItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD972C942B434ADE00734B87 /* GroceryItemListView.swift */; };
 		FDA1CBD42B2F40D40023AC04 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA1CBD32B2F40D40023AC04 /* Constants.swift */; };
 		FDA1CBD72B2F40E70023AC04 /* GroceryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA1CBD62B2F40E70023AC04 /* GroceryModel.swift */; };
 		FDA1CBDC2B2F5E460023AC04 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA1CBDB2B2F5E460023AC04 /* LoginView.swift */; };
@@ -33,6 +36,9 @@
 		FD47B8CD2B36E36700785417 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
 		FD481BC02B41538800F1E51D /* GroceryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryDetailView.swift; sourceTree = "<group>"; };
 		FD481BC22B41563000F1E51D /* AddNewGroceryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroceryItemView.swift; sourceTree = "<group>"; };
+		FD73803E2B457D4E00C3BD95 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		FD7380402B457D6D00C3BD95 /* GlobalErrorsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalErrorsType.swift; sourceTree = "<group>"; };
+		FD972C942B434ADE00734B87 /* GroceryItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemListView.swift; sourceTree = "<group>"; };
 		FDA1CBD32B2F40D40023AC04 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FDA1CBD62B2F40E70023AC04 /* GroceryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryModel.swift; sourceTree = "<group>"; };
 		FDA1CBDB2B2F5E460023AC04 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -63,6 +69,8 @@
 			children = (
 				FDA1CBD32B2F40D40023AC04 /* Constants.swift */,
 				FDA1CBDF2B2F94AF0023AC04 /* AppState.swift */,
+				FD73803E2B457D4E00C3BD95 /* ErrorView.swift */,
+				FD7380402B457D6D00C3BD95 /* GlobalErrorsType.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -87,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				FD47B8CD2B36E36700785417 /* ColorSelector.swift */,
+				FD972C942B434ADE00734B87 /* GroceryItemListView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -231,14 +240,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDA1CBD42B2F40D40023AC04 /* Constants.swift in Sources */,
+				FD7380412B457D6D00C3BD95 /* GlobalErrorsType.swift in Sources */,
 				FD481BC32B41563000F1E51D /* AddNewGroceryItemView.swift in Sources */,
 				FDA1CBE02B2F94AF0023AC04 /* AppState.swift in Sources */,
+				FD972C952B434ADE00734B87 /* GroceryItemListView.swift in Sources */,
 				FDA1CBD72B2F40E70023AC04 /* GroceryModel.swift in Sources */,
 				FDFE9F7C2B19E393002348DA /* RegisterView.swift in Sources */,
 				FDFE9F7A2B19E393002348DA /* GoGroceryApp.swift in Sources */,
 				FD47B8CB2B36E10800785417 /* AddGroceryCategoryView.swift in Sources */,
 				FD2C887D2B2DF5ED006EECF1 /* HTTPClient.swift in Sources */,
 				FD2C88792B2DD9E4006EECF1 /* Extensions.swift in Sources */,
+				FD73803F2B457D4E00C3BD95 /* ErrorView.swift in Sources */,
 				FDB12E422B374AC600393A0C /* GroceryCategoryListView.swift in Sources */,
 				FD47B8CE2B36E36700785417 /* ColorSelector.swift in Sources */,
 				FDA1CBDC2B2F5E460023AC04 /* LoginView.swift in Sources */,

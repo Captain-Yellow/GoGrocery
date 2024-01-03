@@ -36,7 +36,7 @@ struct GroceryCategoryListView: View {
                 
                 List/*(groceryModel.groceryCategories)*/ { /*grocery in*/
                     ForEach(groceryModel.groceryCategories) { groceryCategory in
-                        NavigationLink(value: groceryCategory) {
+                        NavigationLink(value: Route.GroceryCategoryDetail(groceryCategory)) {
                             HStack {
                                 Circle()
                                     .foregroundStyle(Color.fromHex(groceryCategory.colorCode))
@@ -50,13 +50,24 @@ struct GroceryCategoryListView: View {
                     .onDelete { indexSet in
                         self.deleteThisGroceryCategory(offsets: indexSet)
                     }
+//                    .navigationDestination(for: Route.self) { value in
+//                        switch value {
+//                            case .GroceryCategoryDetail(let oo):
+//                                GroceryDetailView(groceryCategoryResponseDTO: oo)
+//                            default:
+//                                ContentUnavailableView("person", systemImage: "person")
+//                        }
+//                    }
                 }
             }
         }
+        .navigationTitle("Grocery Categories")
+        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button("Logout") {
                     appState.popToRoot()
+//                    appState.routes.append(.LoginScreen)
                 }
             }
             

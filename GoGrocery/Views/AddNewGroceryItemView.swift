@@ -55,6 +55,7 @@ struct AddNewGroceryItemView: View {
         
         do {
             try await groceryModel.saveGroceryItem(groceryCategoryId: groceryCategory.id, groceryItemRequestDTO: GroceryItemRequestDTO(title: title, price: price!, quantity: quantity!))
+            dismiss()
         } catch {
             print("\(error.localizedDescription) \n\n")
             print(error)

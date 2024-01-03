@@ -37,6 +37,7 @@ struct RegisterView: View {
                     .disabled(!isFieldsValid)
                     
                     Spacer()
+                    
                     HStack {
 //                        NavigationLink("Go to Detail", value: Route.LoginScreen)
                         Button("Login") {
@@ -80,6 +81,12 @@ struct RegisterView: View {
                     .frame(maxWidth: .infinity)
                 }
             }
+            .navigationTitle("Register")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .sheet(item: $appState.globalErrorWrapper) { errorValue in
+                ErrorView(errorWrapper: errorValue)
+            }
     }
     
     fileprivate func register() async {
@@ -93,6 +100,7 @@ struct RegisterView: View {
             } else {
                 self.error = resault.error
                 self.errorMessage = resault.reason ?? ""
+                appState.globalErrorWrapper = ErrorWrapper(error: GlobalErrorsType.registerError, guidance: resault.reason ?? "")
             }
         } catch {
             print("error in register async func ")

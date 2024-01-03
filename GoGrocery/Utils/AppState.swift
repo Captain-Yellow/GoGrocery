@@ -6,16 +6,20 @@
 //
 
 import Foundation
+import GoGrocerySharedDTO
 
 enum Route: Hashable {
     case LoginScreen
     case RegisterScreen
     case GroceryCategoryList
+    case GroceryCategoryDetail(GroceryCategoryResponseDTO)
     case AddGroceryCategory
+    case AddGroceryItem
 }
 
 class AppState: ObservableObject {
     @Published var routes: [Route] = []
+    @Published var globalErrorWrapper: ErrorWrapper?
     
     func popAll() {
         routes.removeAll()
